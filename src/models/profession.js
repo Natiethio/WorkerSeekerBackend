@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../configration/dbconfig");
 
 const profssionSchema = new mongoose.Schema({
   profession: {type: String, required: true},

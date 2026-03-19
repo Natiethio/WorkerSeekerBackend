@@ -1,4 +1,5 @@
-const Worker = require("../models/worker")
+const Worker = require("../models/worker");
+const ServiceCategory = require("../models/servicesCategory");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
@@ -17,6 +18,9 @@ require('dotenv').config();
 class workerService {
   async getAllWorkers() {
     return await Worker.find();
+  }
+  async getAllCategories() {
+    return await ServiceCategory.distinct("name");
   }
 }
 

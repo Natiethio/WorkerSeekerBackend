@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../configration/dbconfig");
 
 const bookingSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },

@@ -20,6 +20,16 @@ class workerController {
       res.status(500).json({ error: error.message })
     }
   }
+
+    async getAllCategories(req, res) {
+    try {
+      const allcategories = await workerService.getAllCategories();
+      res.json(allcategories);
+    }
+    catch (error) {
+      res.status(500).json({ error: error.message })
+    }
+  }
 }
 
 module.exports = new workerController();

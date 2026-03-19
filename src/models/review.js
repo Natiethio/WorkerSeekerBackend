@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../configration/dbconfig");
 
 const reviewSchema = new mongoose.Schema({
   reviewer: {type: String, required: true},

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../configration/dbconfig");
 const reviewSchema = require("./review");
 
 const workerSchema = new mongoose.Schema({
